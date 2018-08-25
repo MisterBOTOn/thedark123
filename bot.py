@@ -35,7 +35,7 @@ bot.load_extension("cogs.meta")
 
 
 colors = [discord.Colour.purple(), discord.Colour.blue(), discord.Colour.red(), discord.Colour.green(), discord.Colour.orange()]
-owner = [404708655578218511]
+owner = [449666730680254516]
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll', 'libopus-0.dll', 'libopus.so.0', 'libopus.0.dylib']
 """
 def load_opus_lib(opus_libs=OPUS_LIBS):
