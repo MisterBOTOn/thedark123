@@ -135,7 +135,7 @@ class Utility():
 		em.add_field(name=':clock1: Created at', value=ctx.me.created_at)
 		em.add_field(name='Library', value='Python (discord.py)')
 		em.set_thumbnail(url=ctx.me.avatar_url)
-		em.set_footer(text='Thank you for using Atomical <3')
+		em.set_footer(text='Thank you for using TheDark <3')
 		await ctx.send(embed=em)
 
 
