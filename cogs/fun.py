@@ -22,9 +22,9 @@ class Fun():
 		'''Ask the magic 8-Ball
 		-------------------
 		Ex:
-		a?8ball Is this bot popular?'''
+		d!8ball Is this bot popular?'''
 		if question is None:
-			return await ctx.send('Hey, please do `a?8ball <question>`')
+			return await ctx.send('Hey, please do `d!8ball <question>`')
 		if question is not None:
 			await ctx.send(random.choice(['● It is certain.', '● It is decidedly so.', '● Without a doubt.', '● Yes - definitely.', '● You may rely on it', '● As I see it, yes.', '● Most likely.', '● Outlook good.', '● Yes.', '● Signs point to yes.', '● Reply hazy, try again', '● Ask again later.', '● Better not tell you now.', '● Cannot predict now.', '● Concentrate and ask again.', '● Don`t count on it.', '● My reply is no.', '● My sources say no', '● Outlook not so good.', '● Very doubtful.' ]))
 
@@ -38,7 +38,7 @@ class Fun():
 		'''Calculate an equation
 		-------------------
 		Ex:
-		a?calculate [number] [ * | + | - | ^ | \ ] [number]'''
+		d!calculate [number] [ * | + | - | ^ | \ ] [number]'''
 		s = ['+', '-', '*', '/', '^']
 		if type == '+':
 			return await ctx.send(left + right)
@@ -51,7 +51,7 @@ class Fun():
 		if type == '/':
 			return await ctx.send(f'{left / right:.3f}')
 		if type != s:
-			await ctx.send('<:AtomicalQuestion:474576686873051136> | Invalid equation')
+			await ctx.send('| Invalid equation')
 
 
 	@commands.command()
@@ -62,8 +62,8 @@ class Fun():
 		Ex:
 		a?space Hello There'''
 		if message is None:
-			return await ctx.send('<:AtomicalQuestion:474576686873051136> | Hey, please do `a?space [message]`!')
-		if ctx.author.id == 404708655578218511:
+			return await ctx.send('| Hey, please do `d!space [message]`!')
+		if ctx.author.id == 449666730680254516:
 			return await ctx.send(' '.join(message))
 		await ctx.send(' '.join(message) + f'  (requested by {ctx.message.author})')
 
@@ -81,7 +81,7 @@ class Fun():
 		'''Make me choose something
 		-------------------
 		Ex:
-		a?choose Coffee Tea'''
+		d!choose Coffee Tea'''
 		a = [option1, option2]
 		if option1 == option2:
 			return await ctx.send(":x: | I can't choose the same things")
@@ -95,9 +95,9 @@ class Fun():
 		'''Make a poll
 		-------------------
 		Ex:
-		a?poll Is this bot popular?'''
+		d!poll Is this bot popular?'''
 		if len(question) > 100:
-			return await ctx.send('<:AtomicalForbidden:474576377954172949> | The question is too long!')
+			return await ctx.send('| The question is too long!')
 		em = discord.Embed(color=discord.Colour.blue())
 		em.add_field(name='Question:', value=question)
 		em.set_footer(icon_url=ctx.author.avatar_url, text=f'Requested by {ctx.author}')
