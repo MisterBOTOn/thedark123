@@ -23,7 +23,7 @@ class More():
 	async def discordbotlist(self, ctx):
 		'Returns the bot DBL link'
 		em = discord.Embed(title="", color=discord.Colour.blue())
-		em.add_field(name="Discord Bot List", value='[Atomical]( https://discordbots.org/bot/464683212174786561 )', inline=False)
+		em.add_field(name="Discord Bot List", value='[TheDark]( https://www.youtube.com/channel/UCe3cJzGyLmIvqp0fj5PHwew?view_as=subscriber )', inline=False)
 		
 		await ctx.send(embed=em)
 
@@ -40,10 +40,10 @@ class More():
 		Ex:
 		a?feedback [feedback]'''
 		if feedback is None:
-			await ctx.send('<:AtomicalQuestion:474576686873051136> | Hey, please do `a?feedback <feedback>`')
+			await ctx.send(' | Hey, please do `a?feedback <feedback>`')
 		if feedback is not None:
-			await self.bot.get_guild(453974498421506062).get_channel(478504533480177684).send(f'{ctx.author} ({ctx.author.id}) reported: {feedback}')
-			await ctx.send('<:AtomicalSucces:474568904170274826> | Your feedback was reported to the team')
+			await self.bot.get_guild(481842101844443146).get_channel(481842101844443146).send(f'{ctx.author} ({ctx.author.id}) reported: {feedback}')
+			await ctx.send(' | Your feedback was reported to the team')
 
 
 
@@ -62,10 +62,10 @@ class More():
 		Ex:
 		a?bug [bug]'''
 		if bug is None:
-			await ctx.send('<:AtomicalQuestion:474576686873051136> | Hey, please do `a?bug <bug>`')
+			await ctx.send(' | Hey, please do `d!bug <bug>`')
 		if bug is not None:
-			await self.bot.get_guild(453974498421506062).get_channel(478504558163787776).send(f'{ctx.author} ({ctx.author.id}) reported: {bug}')
-			await ctx.message.channel.send('<:AtomicalSucces:474568904170274826> | Your problem was reported to the team')
+			await self.bot.get_guild(481842101844443146).get_channel(481842101844443146).send(f'{ctx.author} ({ctx.author.id}) reported: {bug}')
+			await ctx.message.channel.send('| Your problem was reported to the team')
 
 
 
