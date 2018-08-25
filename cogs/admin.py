@@ -129,7 +129,7 @@ class Admin():
 	async def botnick(self, ctx, *, nick):
 		'Change the botnick'
 		if nick is None:
-			return await ctx.send('| Hey, please do `a?botnick <nick>`')
+			return await ctx.send('| Hey, please do `d!botnick <nick>`')
 		if nick == 'reset':
 			await ctx.me.edit(nick='')
 			return await ctx.send('| Nick succefully reseted')
