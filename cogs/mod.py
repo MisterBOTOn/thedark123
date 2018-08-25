@@ -26,7 +26,7 @@ class Moderation():
 		'''Ban a member in a guild
 		-------------------
 		Ex:
-		a?ban @Adytzu Bad boy'''
+		d!ban @zZstefan Bad boy'''
 		if member is None:
 			await ctx.send("| Please provide a user to ban")
 		if member == ctx.author:
@@ -50,7 +50,7 @@ class Moderation():
 		'''Kick a member in a guild
 		-------------------
 		Ex:
-		a?kick @Adytzu Shitposting'''
+		d!kick @zZstefan Shitposting'''
 		if member is None:
 			await ctx.send("| Please provide a user to kick")
 		if member == ctx.author:
@@ -70,7 +70,7 @@ class Moderation():
 		'''Delete a number of messages in a channel
 		-------------------
 		Ex:
-		a?purge 50'''
+		d!purge 50'''
 		if number>500 or number<0:
 			return await ctx.send("| Invalid amount, maximum is 500.")
 		await ctx.message.delete()
