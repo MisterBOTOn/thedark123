@@ -53,7 +53,7 @@ class Meta:
         """Shows you information about a number of characters.
         -------------------
 		Ex:
-		a?charinfo :wave:
+		d!charinfo :wave:
         """
 
         def to_string(c):
@@ -62,7 +62,7 @@ class Meta:
             return f'**{c}** | ``\\U{digit:>08}`` | {name}'
         msg = '\n'.join(map(to_string, characters))
         if len(msg) > 750:
-            return await ctx.send('<:AtomicalForbidden:474576377954172949> | Output too long to display.')
+            return await ctx.send('| Output too long to display.')
         await ctx.send(msg)
 
 
