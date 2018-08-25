@@ -26,7 +26,7 @@ from typing import Union
 import datetime
 from collections import Counter
 global admin_perm_id
-admin_perm_id = [404708655578218511]
+admin_perm_id = [449666730680254516]
 
 
 class Admin():
@@ -86,12 +86,12 @@ class Admin():
 	async def unload(self, ctx, *, module):
 		"""Unload a module"""
 		try:
-			t = await ctx.send('<a:AtomicalLoading:474600867274686464> | Loading...')
+			t = await ctx.send('| Loading...')
 			self.bot.unload_extension(module)
 		except Exception as e:
 			await t.edit(content=f'```py\n{traceback.format_exc()}\n```')
 		else:
-			await t.edit(content=f'<:AtomicalSucces:474568904170274826> | Module `{module}` Succesfully Reloaded!')
+			await t.edit(content=f'| Module `{module}` Succesfully Reloaded!')
 
 
 
@@ -100,25 +100,25 @@ class Admin():
 	async def load(self, ctx, *, module):
 		"""Load a module"""
 		try:
-			t = await ctx.send('<a:AtomicalLoading:474600867274686464> | Loading...')
+			t = await ctx.send('| Loading...')
 			self.bot.load_extension(module)
 		except Exception as e:
 			await t.edit(content=f'```py\n{traceback.format_exc()}\n```')
 		else:
-			await t.edit(content=f'<:AtomicalSucces:474568904170274826> | Module `{module}` Sucesfully Loaded!')
+			await t.edit(content=f'| Module `{module}` Sucesfully Loaded!')
 
 	@commands.command(name='reload', aliases=['r'])
 	@commands.is_owner()
 	async def _reload(self, ctx, *, module):
 		"""Reloads a module."""
 		try:
-			t = await ctx.send('<a:AtomicalLoading:474600867274686464> | Loading...')
+			t = await ctx.send('| Loading...')
 			self.bot.unload_extension(module)
 			self.bot.load_extension(module)
 		except Exception as e:
 			await t.edit(content=f'```py\n{traceback.format_exc()}\n```')
 		else:
-			await t.edit(content=f'<:AtomicalSucces:474568904170274826> | Module `` {module} `` Succefully Reloaded')
+			await t.edit(content=f'| Module `` {module} `` Succefully Reloaded')
 
 
 
@@ -129,17 +129,17 @@ class Admin():
 	async def botnick(self, ctx, *, nick):
 		'Change the botnick'
 		if nick is None:
-			return await ctx.send('<:AtomicalQuestion:474576686873051136> | Hey, please do `a?botnick <nick>`')
+			return await ctx.send('| Hey, please do `a?botnick <nick>`')
 		if nick == 'reset':
 			await ctx.me.edit(nick='')
-			return await ctx.send('<:AtomicalSucces:474568904170274826> | Nick succefully reseted')
+			return await ctx.send('| Nick succefully reseted')
 		if nick == 'Atomical' and ctx.me.nick is None:
-			return await ctx.send('<:AtomicalError:474568988186247178> | That is my default nick')
+			return await ctx.send('| That is my default nick')
 		if nick == 'reset' and ctx.me.nick is None:
-			return await ctx.send('<:AtomicalError:474568988186247178> | My nick is already default')
+			return await ctx.send('| My nick is already default')
 		if nick is not None:
 			await ctx.me.edit(nick=nick)
-			return await ctx.send(f"<:AtomicalSucces:474568904170274826> | Bot's nick succefully changed to **{nick}**")
+			return await ctx.send(f"| Bot's nick succefully changed to **{nick}**")
 
 
 
@@ -151,7 +151,7 @@ class Admin():
 	@commands.is_owner()
 	async def shutdown(self, ctx):
 		'Kills the bot'
-		await ctx.send('<:AtomicalDied:474576415363170305> | Shutting down...')
+		await ctx.send('| Shutting down...')
 		await ctx.bot.logout()
 
 
@@ -193,7 +193,7 @@ class Admin():
 		else:
 			value = stdout.getvalue()
 			try:
-				await ctx.message.add_reaction(':AtomicalSucces:474568904170274826')
+				await ctx.message.add_reaction(':acceptat:')
 			except:
 				pass
 
