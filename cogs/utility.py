@@ -39,7 +39,7 @@ class Utility():
 		Works only for custom ones
 		------------------------
 		Ex:
-		a?emoji :emoji:'''
+		d!emoji :emoji:'''
 		await ctx.send(f'`Name:` {emoji.name}\n`ID:` {emoji.id}\n`Preview:` {emoji} (`{emoji}`)\n`URL:` {emoji.url}')
 
 
