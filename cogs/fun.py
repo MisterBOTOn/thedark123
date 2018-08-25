@@ -60,7 +60,7 @@ class Fun():
 		'''Space some text
 		-------------------
 		Ex:
-		a?space Hello There'''
+		d!space Hello There'''
 		if message is None:
 			return await ctx.send('| Hey, please do `d!space [message]`!')
 		if ctx.author.id == 449666730680254516:
